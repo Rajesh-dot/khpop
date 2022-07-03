@@ -2,21 +2,35 @@
   <ion-page>
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
+      <ion-fab vertical="bottom" horizontal="center" translucent="true">
+        <ion-fab-button color="dark">
+          <ion-icon :icon="addOutline"/>
+        </ion-fab-button>
+      </ion-fab>
       <ion-tab-bar slot="bottom">
-        <ion-tab-button tab="tab1" href="/tabs/tab1">
-          <ion-icon :icon="triangle" />
-          <ion-label>Tab 1</ion-label>
+
+        <ion-tab-button tab="tab1" @click="updateSelected(1)" href="/tabs/tab1">
+          <ion-icon :icon="home" />
+          <ion-label v-if="selected===1">Home</ion-label>
         </ion-tab-button>
-          
-        <ion-tab-button tab="tab2" href="/tabs/tab2">
-          <ion-icon :icon="ellipse" />
-          <ion-label>Tab 2</ion-label>
+
+        <ion-tab-button tab="tab2" @click="updateSelected(2)" href="/tabs/tab2">
+          <ion-icon :icon="library" />
+          <ion-label v-if="selected===2">Library</ion-label>
         </ion-tab-button>
-        
-        <ion-tab-button tab="tab3" href="/tabs/tab3">
-          <ion-icon :icon="square" />
-          <ion-label>Tab 3</ion-label>
+
+        <svg class="svg-class" height="50" viewBox="0 0 100 50" width="100" xmlns="http://www.w3.org/2000/svg"><path class="path-class" d="M100 0v50H0V0c.543 27.153 22.72 49 50 49S99.457 27.153 99.99 0h.01z" fill="white" fill-rule="evenodd"></path></svg>
+      
+        <ion-tab-button tab="tab3" @click="updateSelected(3)" href="/tabs/tab3">
+          <ion-icon :icon="musicalNote" />
+          <ion-label v-if="selected===3">Rajesh Fav</ion-label>
         </ion-tab-button>
+
+        <ion-tab-button tab="tab4" @click="updateSelected(4)" href="/tabs/tab4">
+          <ion-icon :icon="analytics" />
+          <ion-label v-if="selected===4">About</ion-label>
+        </ion-tab-button>
+
       </ion-tab-bar>
     </ion-tabs>
   </ion-page>
@@ -25,16 +39,26 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
-import { ellipse, square, triangle } from 'ionicons/icons';
+import { addOutline, home, library, musicalNote, analytics } from 'ionicons/icons';
 
 export default defineComponent({
   name: 'TabsPage',
   components: { IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage, IonRouterOutlet },
   setup() {
     return {
-      ellipse, 
-      square, 
-      triangle,
+      addOutline, 
+      home,
+      library,
+      musicalNote,
+      analytics
+    }
+  },
+  data: () => ({
+    selected: 1,
+  }),
+  methods: {
+    updateSelected(val:number){
+      this.selected = val;
     }
   }
 });
