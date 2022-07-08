@@ -1,0 +1,6 @@
+{
+	"appId": "io.ionic.starter",
+	"appName": "khpop",
+	"webDir": "dist",
+	"bundledWebRuntime": false
+}

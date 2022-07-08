@@ -1,8 +1,13 @@
 <template>
-  <ion-page>
+  <ion-page class="white">
     <ion-tabs>
       <ion-router-outlet></ion-router-outlet>
-      <ion-fab vertical="bottom" horizontal="center" translucent="true">
+      <ion-fab vertical="top" horizontal="end" slot="fixed">
+      <ion-fab-button>
+          <ion-icon :icon="home"></ion-icon>
+        </ion-fab-button>
+      </ion-fab>
+      <ion-fab vertical="bottom" horizontal="center" slot="fixed" translucent="true">
         <ion-fab-button href="/add_new" color="dark">
           <ion-icon :icon="addOutline"/>
         </ion-fab-button>
@@ -38,12 +43,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet } from '@ionic/vue';
+import { IonTabBar, IonTabButton, IonTabs, IonLabel, IonIcon, IonPage, IonRouterOutlet, IonFab, IonFabButton } from '@ionic/vue';
 import { addOutline, home, library, musicalNote, analytics } from 'ionicons/icons';
 
 export default defineComponent({
   name: 'TabsPage',
-  components: { IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage, IonRouterOutlet },
+  components: { IonLabel, IonTabs, IonTabBar, IonTabButton, IonIcon, IonPage, IonRouterOutlet, IonFab, IonFabButton },
   setup() {
     return {
       addOutline, 
