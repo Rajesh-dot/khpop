@@ -5,9 +5,9 @@
         <h1 class="font-sans text-2xl mt-10 ml-5 text-black font-bold">Welcome</h1>
         <p class="font-sans text-xs ml-5 text-black font-bold">Since, this is your first and last birthday in our collage, Here are your favourite BTS songs</p>
       </ion-text>
-      <ion-searchbar class="rounded-full mt-5" show-cancel-button="always"></ion-searchbar>
+      <ion-searchbar search-icon="search-outline" class="mt-5 searchbar" show-cancel-button="always"></ion-searchbar>
       <ion-card class="rounded-lg mt-5" v-for="song in data" :key="song.id">
-        <ion-item href="/song/">
+        <ion-item :href='"/song/"+song.id'>
           <ion-icon :icon="pin" slot="start"></ion-icon>
           <ion-label><p class="text-black font-bold">song.name</p><p>song.artist</p></ion-label>
         </ion-item>
@@ -18,12 +18,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import { IonPage, IonSearchbar, IonText } from '@ionic/vue';
+import { IonPage, IonSearchbar, IonText, IonCard , IonItem, IonLabel} from '@ionic/vue';
 import { searchOutline, home, pin } from 'ionicons/icons';
 
 export default  defineComponent({
   name: 'Tab1Page',
-  components: { IonPage, IonSearchbar, IonText },
+  components: { IonPage, IonSearchbar, IonText, IonCard, IonItem, IonLabel },
   setup() {
     return {
       searchOutline,

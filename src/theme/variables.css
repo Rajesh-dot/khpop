@@ -240,6 +240,12 @@ ion-tab-button {
   --color-selected: #fbbf24 !important;
 }
 
+.searchbar {
+  --border-radius: 9999px;
+  background-color: white;
+  color: black;
+}
+
 ion-tab-bar {
   position: absolute;
   bottom: 0;

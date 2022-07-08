@@ -1,14 +1,9 @@
 <template>
   <ion-page class="white">
-    <ion-tabs>
+    <ion-tabs class="white">
       <ion-router-outlet></ion-router-outlet>
-      <ion-fab vertical="top" horizontal="end" slot="fixed">
-      <ion-fab-button>
-          <ion-icon :icon="home"></ion-icon>
-        </ion-fab-button>
-      </ion-fab>
       <ion-fab vertical="bottom" horizontal="center" slot="fixed" translucent="true">
-        <ion-fab-button href="/add_new" color="dark">
+        <ion-fab-button ion-fixed href="/add_new" color="dark">
           <ion-icon :icon="addOutline"/>
         </ion-fab-button>
       </ion-fab>
