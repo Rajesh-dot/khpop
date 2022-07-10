@@ -2,7 +2,7 @@
   <ion-page class="white">
     <ion-tabs class="white">
       <ion-router-outlet></ion-router-outlet>
-      <ion-fab vertical="bottom" horizontal="center" slot="fixed" translucent="true">
+      <ion-fab vertical="bottom" horizontal="center" slot="fixed">
         <ion-fab-button ion-fixed href="/add_new" color="dark">
           <ion-icon :icon="addOutline"/>
         </ion-fab-button>

@@ -3,7 +3,7 @@
         <div>
             <ion-toolbar>
                 <ion-buttons slot="start">
-                    <ion-button>
+                    <ion-button href="/tabs/tab1">
                         <ion-icon slot="icon-only" :icon="chevronBackOutline"></ion-icon>
                     </ion-button>
                 </ion-buttons>
@@ -14,12 +14,14 @@
                     </ion-button>
                 </ion-buttons>
             </ion-toolbar>
-            <ion-card class="rounded-2xl h-full mt-8">
-                <img class="h-4/6" src="https://c4.wallpaperflare.com/wallpaper/14/548/927/the-avengers-avengers-endgame-avengers-endgame-infinity-gauntlet-iron-man-hd-wallpaper-preview.jpg" />
+            <ion-card class="rounded-2xl h-full mt-6">
+                <img class="w-full h-80" src="https://m.media-amazon.com/images/I/51qNgkExM8L._SX522_.jpg" />
                 <ion-card-header>
                     
                 </ion-card-header>
                 <ion-card-content>
+                    <span style="font-size:12px;display:inline-block;">0:00</span>
+                    <span style="float: right;font-size: 12px;">11:00</span>
                     <ion-range></ion-range>
                     <ion-buttons>
                         <ion-buttons slot="start">
@@ -57,9 +59,16 @@
 
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent, ref, onMounted } from 'vue';
 import { IonPage, IonCard, IonButton, IonButtons, IonCardContent, IonCardHeader, IonToolbar, IonTitle, IonIcon, IonRange } from '@ionic/vue';
 import { chevronBackOutline, gridOutline, playOutline, pauseOutline, playBack, playForward, repeatOutline, shuffleOutline } from 'ionicons/icons';
+import { Howl } from 'howler';
+
+const el = ref()
+
+onMounted(() => {
+  el.value // <div>
+})
 
 export default defineComponent({
     name: 'SongPage',
@@ -77,11 +86,46 @@ export default defineComponent({
         }
     },
     data: () => ({
-        play: true
+        play: true,
+        player: new Howl({
+                src: ['./assets/files/song.mp3']
+            }),
+        activeTrack: 0,
     }),
     methods: {
+        start(id:number){
+            this.player = new Howl({
+                src: ['./assets/files/song.mp3'],
+                onplay: () => {
+                    this.play = true;
+                    this.activeTrack = id;
+                },
+                onend: () => {
+                    console.log("hello")
+                }
+            })
+            this.player.play();
+        },
         toggle(){
             this.play = !this.play;
+            if(this.play){
+                this.player.pause();
+            }
+            else{
+                this.player.play();
+            }
+        },
+        next(){
+            console.log("hello");
+        },
+        prev(){
+            console.log("hello");
+        },
+        seek(){
+            console.log("hello");
+        },
+        updateProgress(){
+            console.log("hello");
         }
     }
 });
@@ -99,6 +143,7 @@ export default defineComponent({
 .big {
     height:96px;
     width:96px;
+    color: black;
 }
 
 ion-range {
@@ -106,10 +151,11 @@ ion-range {
     --bar-background-active: #bde0fe;
     --bar-height: 8px;
     --bar-border-radius: 8px;
-    --knob-background: #ffc8dd;
+    --knob-background: #fed7aa;
     --knob-size: 40px;
     --pin-background: #ffafcc;
     --pin-color: #fff;
 }
+
 
 </style>
