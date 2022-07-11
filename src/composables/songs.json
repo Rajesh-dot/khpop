@@ -1,0 +1,14 @@
+{
+    "songs": {
+        "1": {"id": 1, "path": "", "name": "FESTA Euphoria", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
+        "2": {"id": 2, "path": "", "name": "Best of me", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
+        "3": {"id": 3, "path": "", "name": "Blood sweat and tears", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
+        "4": {"id": 4, "path": "", "name": "Fake love", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
+        "5": {"id": 5, "path": "", "name": "Fire", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
+        "6": {"id": 6, "path": "", "name": "Magic shop", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
+        "7": {"id": 7, "path": "", "name": "Love myself", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
+        "8": {"id": 8, "path": "", "name": "Black swan", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
+        "9": {"id": 9, "path": "", "name": "Love yourself", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
+        "10": {"id": 10, "path": "", "name": "Spring day", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"}
+    }
+}
