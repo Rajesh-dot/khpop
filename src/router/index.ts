@@ -29,10 +29,26 @@ const routes: Array<RouteRecordRaw> = [
         component: () => import('@/views/Tab3Page.vue')
       },
       {
+        path: 'tab4',
+        component: () => import('@/views/Tab4Page.vue')
+      },
+      {
         path: '/song/:id',
         component: () => import('@/views/Song.vue')
+      },
+      {
+        path: '/memories',
+        component: () => import('@/views/Memories.vue')
+      },
+      {
+        path: '/image/:id',
+        component: () => import('@/views/Photo.vue')
       }
     ]
+  },
+  {
+    path: '/add_new',
+    component: () => import('@/views/AddNew.vue')
   }
 ]
 

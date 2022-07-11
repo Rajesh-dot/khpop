@@ -37,7 +37,7 @@ export default  defineComponent({
   data: () => ({
     selected: 1,
     data: [
-            {"id": 1, "path": "", "name": "FESTA Euphoria", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
+            {"id": 1, "path": "", "name": "Euphoria", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
             {"id": 2, "path": "", "name": "Best of me", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
             {"id": 3, "path": "", "name": "Blood sweat and tears", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
             {"id": 4, "path": "", "name": "Fake love", "artist": "BTS", "logo": "./../../public/assets/bts_logo.jpg"},
