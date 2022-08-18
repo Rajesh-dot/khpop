@@ -3,12 +3,12 @@
     <div>
       <ion-header>
         <ion-toolbar>
-          <ion-title>Favourites</ion-title>
+          <ion-title class="text-black">Favourites</ion-title>
         </ion-toolbar>
       </ion-header>
       <ion-card class="rounded-lg mt-5">
         <ion-item href='/memories'>
-          <ion-icon class="mr-3" :icon="happyOutline"></ion-icon>
+          <ion-icon style="color:black" class="mr-3" :icon="happyOutline"></ion-icon>
           <ion-label><p class="text-black font-bold ml-2">Memories</p></ion-label>
         </ion-item>
       </ion-card>

@@ -2,13 +2,13 @@
   <ion-page>
     <ion-header>
       <ion-toolbar>
-        <ion-title>Tab 2</ion-title>
+        <ion-title class="text-black">Tab 2</ion-title>
       </ion-toolbar>
     </ion-header>
     <ion-content :fullscreen="true">
       <ion-header collapse="condense">
         <ion-toolbar>
-          <ion-title size="large">Comming Soon</ion-title>
+          <ion-title class="text-black" size="large">Comming Soon</ion-title>
         </ion-toolbar>
       </ion-header>
       <h1>Comming Soon</h1>

@@ -1,6 +1,8 @@
 <template>
   <ion-page>
-    <h1>Comming soon</h1>
+    <div>
+        <h1 class="text-black">Comming soon</h1>
+    </div>
   </ion-page>
 </template>
 
